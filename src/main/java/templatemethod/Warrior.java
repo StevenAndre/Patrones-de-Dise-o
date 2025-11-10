@@ -1,0 +1,23 @@
+package templatemethod;
+
+public class Warrior extends EnemyTemplate{
+    @Override
+    public void setSkills() {
+        System.out.println("Health: 200, Mana: 0,Stamina: 100 ");
+    }
+
+    @Override
+    public void attack() {
+        System.out.println("warrior attack");
+    }
+
+    @Override
+    public void protect() {
+        System.out.println("warrior protect");
+    }
+
+    @Override
+    public void result() {
+        System.out.println("warrior has survived ");
+    }
+}
