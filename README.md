@@ -123,4 +123,158 @@ Estos patrones se centran en la comunicación entre objetos y cómo fluye la res
 - Notificaciones de cambios en el inventario
 
 ### 🔹 State
+**Concepto:** Permite que un objeto altere su comportamiento cuando su estado interno cambia.
+
+**Casos de uso en videojuegos:**
+- Estados del jugador (idle, corriendo, saltando, atacando, muerto)
+- Estados de enemigos (patrullando, persiguiendo, atacando, huyendo)
+- Estados del juego (menú, jugando, pausado, game over)
+- Estados de IA
+
+### 🔹 Command
+**Concepto:** Encapsula una solicitud como un objeto, permitiendo parametrizar clientes con diferentes solicitudes.
+
+**Casos de uso en videojuegos:**
+- Sistema de replay y grabación de partidas
+- Sistema de deshacer/rehacer acciones
+- Configuración personalizable de teclas
+- Cola de acciones en juegos por turnos
+- Macros y combos
+
+### 🔹 Strategy
+**Concepto:** Define una familia de algoritmos, encapsula cada uno y los hace intercambiables.
+
+**Casos de uso en videojuegos:**
+- Diferentes comportamientos de IA (agresivo, defensivo, balanceado)
+- Sistemas de pathfinding intercambiables (A*, Dijkstra)
+- Diferentes algoritmos de generación procedural
+- Modos de dificultad
+
+### 🔹 Chain of Responsibility
+**Concepto:** Permite que múltiples objetos tengan la oportunidad de manejar una solicitud.
+
+**Casos de uso en videojuegos:**
+- Sistema de manejo de colisiones (por capas o prioridad)
+- Pipeline de efectos de sonido
+- Procesamiento de input con prioridades
+- Sistema de ayuda contextual
+
+---
+
+## 🎲 Patrones Específicos de Juegos
+
+Patrones desarrollados específicamente para resolver problemas comunes en videojuegos.
+
+### 🔹 Game Loop
+**Concepto:** Ciclo principal que procesa entrada, actualiza el estado del juego y renderiza, ejecutándose continuamente.
+
+**Casos de uso en videojuegos:**
+- Motor principal del juego
+- Sincronización de física y renderizado
+- Control de framerate
+
+### 🔹 Update Method
+**Concepto:** Simula una colección de objetos independientes diciendo a cada uno que procese un frame de comportamiento.
+
+**Casos de uso en videojuegos:**
+- Actualización de entidades del juego
+- Sistema de partículas
+- Actualización de componentes
+
+### 🔹 Double Buffer
+**Concepto:** Utiliza dos buffers para evitar mostrar estados intermedios durante el renderizado.
+
+**Casos de uso en videojuegos:**
+- Renderizado de gráficos sin parpadeos
+- Actualización de física sin glitches visuales
+- Procesamiento de audio suave
+
+### 🔹 Dirty Flag
+**Concepto:** Evita trabajo innecesario marcando datos que han cambiado y necesitan ser recalculados.
+
+**Casos de uso en videojuegos:**
+- Actualización de transformaciones jerárquicas
+- Recálculo de pathfinding solo cuando cambia el mapa
+- Actualización de gráficos de escena solo cuando hay cambios
+
+### 🔹 Service Locator
+**Concepto:** Proporciona un punto de acceso global a servicios sin acoplar al código con sus implementaciones concretas.
+
+**Casos de uso en videojuegos:**
+- Acceso a sistemas de audio, gráficos, input
+- Servicios de red y multijugador
+- Sistemas de analíticas y telemetría
+
+### 🔹 Spatial Partition
+**Concepto:** Organiza objetos en el espacio para hacer búsquedas más eficientes.
+
+**Casos de uso en videojuegos:**
+- Quadtree/Octree para detección de colisiones
+- Grid-based pathfinding
+- Culling de objetos fuera de cámara
+- Sistemas de LOD (Level of Detail)
+
+---
+
+## 📁 Estructura del Repositorio
+```
+📦 Patrones-de-Diseño
+├── 📂 Creacionales/
+│   ├── Singleton/
+│   ├── Factory/
+│   ├── ObjectPool/
+│   └── Prototype/
+├── 📂 Estructurales/
+│   ├── Component/
+│   ├── Decorator/
+│   └── Facade/
+├── 📂 Comportamiento/
+│   ├── Observer/
+│   ├── State/
+│   ├── Command/
+│   └── Strategy/
+└── 📂 EspecificosJuegos/
+    ├── GameLoop/
+    ├── UpdateMethod/
+    └── SpatialPartition/
+```
+
+---
+
+## 🚀 Cómo usar este repositorio
+
+Cada carpeta contiene:
+- Implementación práctica del patrón
+- Ejemplo aplicado a un contexto de videojuego
+- Comentarios explicativos en el código
+- Casos de uso recomendados
+
+---
+
+## 📚 Referencias
+
+- **Game Programming Patterns** - Robert Nystrom
+- **Design Patterns: Elements of Reusable Object-Oriented Software** - Gang of Four
+- **Unity Documentation** - Patrones y mejores prácticas
+
+---
+
+## 👥 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor:
+1. Fork el proyecto
+2. Crea una rama para tu feature
+3. Commit tus cambios
+4. Push a la rama
+5. Abre un Pull Request
+
+---
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT.
+
+---
+
+**Desarrollado con** ❤️ **para la comunidad de desarrollo de videojuegos**
 
