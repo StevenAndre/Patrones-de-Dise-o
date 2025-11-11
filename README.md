@@ -1,6 +1,6 @@
-# 🎮 Patrones de Diseño en Videojuegos
+# 🎮 Patrones de Diseño
 
-Repositorio de ejemplos prácticos de patrones de diseño aplicados al desarrollo de videojuegos.
+Repositorio de ejemplos prácticos de patrones de diseño orientados en tematica  de videojuegos.
 
 ## 📋 Índice
 
@@ -123,3 +123,4 @@ Estos patrones se centran en la comunicación entre objetos y cómo fluye la res
 - Notificaciones de cambios en el inventario
 
 ### 🔹 State
+
